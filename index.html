@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="slider-container">
+         
+            <div id="slider">
+              
+                <img class="slide" src="./images/blue-umbrella.png" alt="Blue Slide">
+                <img class="slide" src="./images/pink-umbrella.png" alt="Pink Slide">
+                <img class="slide" src="./images/yellow-umbrella.png" alt="Yellow Slide">
+            </div>
+        </div>
+        <div id="loader">
+          <img src="./images/loader_icon.svg" alt="Loading..." width="20" height="20">
+        </div>
+      
+        <div class="Logo">
+          <h1>Custom Umbrella</h1>
+            <div class="color-swatches">
+                <button class="color-swatch blue" onclick="changeSlide(0); changeBackgroundColor('blue');"></button>
+                <button class="color-swatch pink" onclick="changeSlide(1); changeBackgroundColor('pink');"></button>
+                <button class="color-swatch yellow" onclick="changeSlide(2); changeBackgroundColor('yellow');"></button>
+            </div>
+            
+            <div class="upload-logo">
+                <label class="upload-btn">
+                    <input type="file" style="display: none;" accept="image/*" onchange="handleLogoUpload(event)">
+                    <img src="./images/upload_icon.svg" alt="Upload Icon"> UPLOAD LOGO
+                    <div id="loader" class="loader"></div>
+                </label>
+            </div>
+            <!-- Logo Preview -->
+            <div id="logoPreview" class="logo-preview" style="display: none;"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

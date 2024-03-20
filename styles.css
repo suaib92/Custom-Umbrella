@@ -1,0 +1,133 @@
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.5); /* Transparent white (50% opacity) */
+  padding: 70px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  grid-column:  3 / span 9;
+  height: 46vh; /* Increase the height */
+  width: 80%; /* Increase the width */
+  max-width: 830px; /* Optionally, set a maximum width */
+}
+
+.container > * {
+  margin-right: 10px; /* Adjust the gap as needed */
+}
+
+.container > *:last-child {
+  margin-right: 0; /* Remove margin from the last child */
+}
+
+#slider-container {
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+#slider {
+  width: 950px; 
+  height: px;
+  display: flex;
+  transition: none;
+}
+
+.slide {
+  width: 300px;
+  height: 252px;
+}
+
+.logo-preview {
+  width: 40px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 230px;
+  left: 37.8%;
+  transform: translateX(-50%);
+}
+
+.color-swatches {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.color-swatch {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+}
+
+.pink {
+  background-color: pink;
+}
+
+.blue {
+  background-color: rgb(86, 86, 201);
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.Logo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.upload-logo {
+  background-color: #00BFFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.upload-logo img {
+  vertical-align: middle;
+  margin-right: 10px; /* Add some spacing between the icon and text */
+}
+
+.upload-logo button:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+/* Styles for the loader */
+#loader {
+  /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  margin-left: 10px; /* Adjust margin as needed */
+}
